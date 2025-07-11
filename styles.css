@@ -25,6 +25,9 @@ body {
 /* Lado izquierdo (botones + formulario) */
 .left-panel {
   flex: 1;
+   display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Lado derecho (ranking) */
@@ -66,6 +69,11 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  background: #f9f9f9;
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-y: auto;
 }
 
 button {
