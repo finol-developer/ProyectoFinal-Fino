@@ -1,6 +1,3 @@
-// Incluye SweetAlert2 en tu HTML antes de este script
-// <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 let nombreLugares = [];
 let eleccionUsuarios = JSON.parse(localStorage.getItem("rankingBares")) || [];
 let barSeleccionado = null;
@@ -142,5 +139,19 @@ function inicializarMapa() {
     });
   });
 }
+
+const modoToggle = document.getElementById("modoToggle");
+
+if (localStorage.getItem("modo") === "oscuro") {
+  document.body.classList.add("dark-mode");
+  modoToggle.textContent = "Cambiar a Modo Claro";
+}
+
+modoToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  const modoActual = document.body.classList.contains("dark-mode") ? "oscuro" : "claro";
+  localStorage.setItem("modo", modoActual);
+  modoToggle.textContent = modoActual === "oscuro" ? "Cambiar a Modo Claro" : "Cambiar a Modo Oscuro";
+});
 
 obtenerProductos();

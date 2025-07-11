@@ -156,3 +156,36 @@ input[type="number"]:focus {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+body.dark-mode {
+  background: #1e1e2f;
+  color: #e2e8f0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode label,
+body.dark-mode #ranking li {
+  color: #e2e8f0;
+}
+
+body.dark-mode button {
+  background-color: #4f46e5;
+}
+
+body.dark-mode button:hover {
+  background-color: #4338ca;
+}
+
+body.dark-mode #formulario,
+body.dark-mode #ranking {
+  background: #2c2c3f;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode input[type="number"] {
+  background-color: #1e1e2f;
+  color: #e2e8f0;
+  border-color: #818cf8;
+}
