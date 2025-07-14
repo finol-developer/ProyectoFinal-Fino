@@ -57,17 +57,30 @@ body {
 
 /* Botón de modo oscuro */
 h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+#modoToggle {
   position: absolute;
   top: 10px;
   right: 10px;
-  padding: 12px 20px;
-  margin: 0;
-  border: none;
+  padding: 10px 16px;
+  font-size: 1rem;
   border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
+
+#modoToggle:hover {
+  background-color: #2563eb;
+}
+
+
 
 h2 {
   color: #1e3a8a;
