@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,7 +5,6 @@
   padding: 0;
 }
 
-/* TÍTULO ANIMADO */
 #tituloAnimado {
   display: inline-block;
   font-size: 3rem;
@@ -26,7 +24,7 @@
   }
 }
 
-/* Estilo general del body */
+
 body {
   background: url(valencia.jpg) no-repeat center center fixed;
   background-size: cover;
@@ -37,14 +35,12 @@ body {
   line-height: 1.5;
 }
 
-/* NUEVO contenedor principal en lugar de flex en body */
 .contenedor {
   display: flex;
   gap: 30px;
   align-items: flex-start;
 }
 
-/* Lado izquierdo (botones y formulario) */
 .left-panel {
   flex: 1;
   display: flex;
@@ -52,12 +48,10 @@ body {
   gap: 20px;
 }
 
-/* Lado derecho (ranking) */
 .right-panel {
   flex: 1;
 }
 
-/* Botón de modo oscuro */
 h1 {
   text-align: center;
   font-size: 2.5rem;
@@ -175,7 +169,6 @@ input[type="number"]:focus {
   display: none;
 }
 
-/* Contenedor para mapa y foto uno al lado del otro */
 #fotoBar,
 #ubicaciondelugares {
   width: 48%;
@@ -183,7 +176,6 @@ input[type="number"]:focus {
   margin: 0;
 }
 
-/* Contenedor envolvente para imagen y mapa */
 #contenedorMapaFoto {
   display: flex;
   justify-content: space-between;
@@ -242,7 +234,6 @@ body.dark-mode input[type="number"] {
   border-color: #818cf8;
 }
 
-/* Responsive para móviles */
 @media (max-width: 768px) {
   .contenedor {
     flex-direction: column;
