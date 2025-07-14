@@ -8,7 +8,6 @@ const nombreBarH2 = document.getElementById("nombreBar");
 const votacionForm = document.getElementById("votacionForm");
 const rankingDiv = document.getElementById("ranking");
 const fotoBarDiv = document.getElementById("fotoBar");
-
 const URL = "data.json";
 
 function obtenerProductos() {

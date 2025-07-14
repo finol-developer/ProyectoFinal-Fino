@@ -36,14 +36,14 @@ body {
   line-height: 1.5;
 }
 
-/* NUEVO contenedor principal en lugar de flex en <body> */
+/* NUEVO contenedor principal en lugar de flex en body */
 .contenedor {
   display: flex;
   gap: 30px;
   align-items: flex-start;
 }
 
-/* Lado izquierdo (botones + formulario) */
+/* Lado izquierdo (botones y formulario) */
 .left-panel {
   flex: 1;
   display: flex;
@@ -215,8 +215,6 @@ body.dark-mode #descripcion {
 body.dark-mode #descripcion h4 {
   color: #93c5fd;
 }
-
-
 
 /* Modo oscuro */
 body.dark-mode {
