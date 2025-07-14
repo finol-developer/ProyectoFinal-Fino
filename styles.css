@@ -193,7 +193,7 @@ input[type="number"]:focus {
 }
 
 #descripcion {
-  background-image:url(images/fondo.jpg);
+  background: url(images/fondo.jpg);
   background-size: cover;
   background-position: center;
   padding: 20px;
