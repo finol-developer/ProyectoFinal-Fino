@@ -9,7 +9,7 @@
 /* TÍTULO ANIMADO */
 #tituloAnimado {
   display: inline-block;
-  font-size: 3 rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #1e3a8a;
   text-transform: uppercase; 
@@ -28,7 +28,8 @@
 
 /* Estilo general del body */
 body {
-  background: #f0f4f8;
+  background: url('images/fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #333;
   padding: 20px;
   max-width: 1200px;
@@ -190,17 +191,6 @@ input[type="number"]:focus {
   gap: 4%;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-#descripcion {
-  background: url(images/fondo.jpg);
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-  color: #1e293b;
 }
 
 #descripcion h4 {
