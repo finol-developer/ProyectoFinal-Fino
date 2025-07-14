@@ -93,7 +93,7 @@ function mostrarRanking() {
     (a, b) => calcularPuntajeTotal(b.puntajes) - calcularPuntajeTotal(a.puntajes)
   );
 
-  rankingDiv.innerHTML = "<h2>Ranking de Bares</h2><ol>";
+  rankingDiv.innerHTML = "<h2>Resultados del Ranking</h2><ol>";
   ordenados.forEach((bar) => {
     rankingDiv.innerHTML += `<li>${bar.nombre} - Puntaje Total: ${calcularPuntajeTotal(bar.puntajes)}</li>`;
   });
