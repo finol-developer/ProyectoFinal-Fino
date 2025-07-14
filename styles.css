@@ -5,6 +5,26 @@
   margin: 0;
   padding: 0;
 }
+
+title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: inline-block;
+  background: linear-gradient(270deg, #3b82f6, #9333ea, #f59e0b, #10b981);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientTitle 5s ease infinite;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+@keyframes gradientTitle {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+} }
+
+
 #tituloAnimado {
   display: inline-block;
   overflow: hidden;
