@@ -13,6 +13,10 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   line-height: 1.5;
+}
+
+/* NUEVO contenedor principal en lugar de flex en <body> */
+.contenedor {
   display: flex;
   gap: 30px;
   align-items: flex-start;
@@ -195,9 +199,11 @@ body.dark-mode input[type="number"] {
   border-color: #818cf8;
 }
 
-/*adaptacion para moviles */
+
+/*adaptacion para moviles*/
+
 @media (max-width: 768px) {
-  body {
+  .contenedor {
     flex-direction: column;
     padding: 10px;
   }
@@ -223,6 +229,12 @@ body.dark-mode input[type="number"] {
   button {
     width: 100%;
     text-align: center;
+    margin-top: 8px;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    margin-top: 5px;
   }
 
   .left-panel,

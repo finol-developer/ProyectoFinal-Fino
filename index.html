@@ -2,47 +2,54 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ranking de Bares</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
 <body>
   <h1><button id="modoToggle">Cambiar a Modo Oscuro</button></h1>
+
   <section id="product-container"></section>
 
-  <div class="left-panel">
-    <h2>Clasifica un bar</h2>
-    <section id="imagenesDeBares"></section>
-    <div id="contenedorMapaFoto">
-    <div id="fotoBar"></div>
-    <section id="ubicaciondelugares"></section>
-    </div>
+  
+  <div class="contenedor">
+    <div class="left-panel">
+      <h2>Clasifica un bar</h2>
+      <section id="imagenesDeBares"></section>
 
-    <div id="barSelection"></div>
+      <!-- CONTENEDOR MAPA + FOTO -->
+      <div id="contenedorMapaFoto">
+        <div id="fotoBar"></div>
+        <section id="ubicaciondelugares"></section>
+      </div>
+
+      <!-- Botones para elegir bar -->
+      <div id="barSelection"></div>
+
+      <!-- Formulario de votación -->
       <div id="formulario" class="hidden">
-      <h3 id="nombreBar"></h3>
-      <form id="votacionForm">
-        <label>Atención: <input type="number" name="atencion" min="1" max="10" required></label>
-        <label>Rapidez: <input type="number" name="rapidez" min="1" max="10" required></label>
-        <label>Tragos: <input type="number" name="tragos" min="1" max="10" required></label>
-        <label>Comida: <input type="number" name="comida" min="1" max="10" required></label>
-        <label>Precios: <input type="number" name="precios" min="1" max="10" required></label>
-        <label>Limpieza: <input type="number" name="limpieza" min="1" max="10" required></label>
-        <button type="submit">Enviar Votación</button>
-      </form>
+        <h3 id="nombreBar"></h3>
+        <form id="votacionForm">
+          <label>Atención: <input type="number" name="atencion" min="1" max="10" required></label>
+          <label>Rapidez: <input type="number" name="rapidez" min="1" max="10" required></label>
+          <label>Tragos: <input type="number" name="tragos" min="1" max="10" required></label>
+          <label>Comida: <input type="number" name="comida" min="1" max="10" required></label>
+          <label>Precios: <input type="number" name="precios" min="1" max="10" required></label>
+          <label>Limpieza: <input type="number" name="limpieza" min="1" max="10" required></label>
+          <button type="submit">Enviar Votación</button>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <div class="right-panel">
-    <div id="ranking"></div>
+    <div class="right-panel">
+      <div id="ranking"></div>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="main.js"></script>
-
 </body>
 </html>
