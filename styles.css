@@ -13,10 +13,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   line-height: 1.5;
-}
-
-/* Contenedor general dividido en 2 columnas */
-body {
   display: flex;
   gap: 30px;
   align-items: flex-start;
@@ -25,7 +21,7 @@ body {
 /* Lado izquierdo (botones + formulario) */
 .left-panel {
   flex: 1;
-   display: flex;
+  display: flex;
   flex-direction: column;
   gap: 20px;
 }
@@ -165,6 +161,7 @@ input[type="number"]:focus {
   margin-bottom: 20px;
 }
 
+/* Modo oscuro */
 body.dark-mode {
   background: #1e1e2f;
   color: #e2e8f0;
@@ -196,4 +193,46 @@ body.dark-mode input[type="number"] {
   background-color: #1e1e2f;
   color: #e2e8f0;
   border-color: #818cf8;
+}
+
+/*adaptacion para moviles */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #contenedorMapaFoto {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #fotoBar,
+  #ubicaciondelugares {
+    width: 100%;
+    height: 250px;
+  }
+
+  #barSelection {
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+
+  h1 {
+    position: static;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
