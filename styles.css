@@ -9,10 +9,11 @@
 /* TÍTULO ANIMADO */
 #tituloAnimado {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 3 rem;
   font-weight: bold;
   color: #1e3a8a;
-
+  text-transform: uppercase; 
+  text-align: left;  
   opacity: 0;
   transform: translateX(-20px);
   animation: slideIn 1s ease-out forwards;
@@ -81,13 +82,7 @@ h1 {
 }
 
 
-
 h2 {
-  color: #1e3a8a;
-  margin-bottom: 20px;
-}
-
-h3 {
   color: #2563eb;
   margin-top: 30px;
   margin-bottom: 15px;
