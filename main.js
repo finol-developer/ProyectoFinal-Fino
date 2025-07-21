@@ -196,4 +196,37 @@ modoToggle.addEventListener("click", () => {
   modoToggle.textContent = modoActual === "oscuro" ? "Cambiar a Modo Claro" : "Cambiar a Modo Oscuro";
 });
 
+const cerrarSesionBtn = document.getElementById("cerrarSesion");
+
+function actualizarEstadoRegistro() {
+  if (usuarioRegistrado) {
+    registroUsuarioDiv.classList.add("hidden");
+    formularioDiv.classList.remove("hidden");
+    cerrarSesionBtn.style.display = "block"; // Mostrar botón cerrar sesión
+  } else {
+    registroUsuarioDiv.classList.remove("hidden");
+    formularioDiv.classList.add("hidden");
+    cerrarSesionBtn.style.display = "none"; // Ocultar si no hay usuario
+  }
+}
+
+cerrarSesionBtn.addEventListener("click", () => {
+  Swal.fire({
+    title: "¿Cerrar sesión?",
+    text: "Se eliminará el usuario registrado y deberás registrarte de nuevo.",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Sí, cerrar sesión",
+    cancelButtonText: "Cancelar"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      localStorage.removeItem("usuarioRegistrado");
+      usuarioRegistrado = null;
+      actualizarEstadoRegistro();
+      Swal.fire("Sesión cerrada", "Puedes registrarte de nuevo", "info");
+    }
+  });
+});
+
+
 obtenerProductos();
