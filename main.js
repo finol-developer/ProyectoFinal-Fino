@@ -10,6 +10,37 @@ const rankingDiv = document.getElementById("ranking");
 const fotoBarDiv = document.getElementById("fotoBar");
 const URL = "data.json";
 
+const registroUsuarioDiv = document.getElementById("registroUsuario");
+const registroForm = document.getElementById("registroForm");
+
+let usuarioRegistrado = JSON.parse(localStorage.getItem("usuarioRegistrado")) || null;
+
+function actualizarEstadoRegistro() {
+  if (usuarioRegistrado) {
+    registroUsuarioDiv.classList.add("hidden");
+    formularioDiv.classList.remove("hidden");
+  } else {
+    registroUsuarioDiv.classList.remove("hidden");
+    formularioDiv.classList.add("hidden");
+  }
+}
+
+registroForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const nombre = document.getElementById("nombreUsuario").value.trim();
+  const email = document.getElementById("emailUsuario").value.trim();
+
+  if (!nombre || !email) {
+    Swal.fire('Error', 'Por favor completa todos los campos', 'error');
+    return;
+  }
+
+  usuarioRegistrado = { nombre, email };
+  localStorage.setItem("usuarioRegistrado", JSON.stringify(usuarioRegistrado));
+  Swal.fire('¡Registro exitoso!', '', 'success');
+  actualizarEstadoRegistro();
+});
+
 function obtenerProductos() {
   fetch(URL)
     .then(response => response.json())
@@ -21,6 +52,7 @@ function obtenerProductos() {
       if (nombreLugares.length > 0) {
         seleccionarBar(0);
       }
+      actualizarEstadoRegistro();
     })
     .catch(error => {
       Swal.fire('Error', 'No se pudieron cargar los bares.', 'error');
@@ -41,12 +73,20 @@ function mostrarBotones() {
 function seleccionarBar(index) {
   barSeleccionado = nombreLugares[index];
   nombreBarH3.textContent = `Votando por: ${barSeleccionado.nombre}`;
-  formularioDiv.classList.remove("hidden");
+  // Mostrar solo si usuario está registrado
+  if (usuarioRegistrado) {
+    formularioDiv.classList.remove("hidden");
+  }
   mostrarFotoBar(barSeleccionado.nombre);
 }
 
 votacionForm.addEventListener("submit", function (e) {
   e.preventDefault();
+
+  if (!usuarioRegistrado) {
+    Swal.fire('Error', 'Debes registrarte antes de votar', 'error');
+    return;
+  }
 
   Swal.fire({
     title: '¿Enviar votación?',
@@ -69,6 +109,7 @@ votacionForm.addEventListener("submit", function (e) {
       const bar = {
         nombre: barSeleccionado.nombre,
         puntajes,
+        usuario: usuarioRegistrado
       };
 
       eleccionUsuarios.push(bar);
@@ -133,7 +174,9 @@ function inicializarMapa() {
       barSeleccionado = lugar;
       mostrarFotoBar(lugar.nombre);
       nombreBarH3.textContent = `Votando por: ${lugar.nombre}`;
-      formularioDiv.classList.remove("hidden");
+      if (usuarioRegistrado) {
+        formularioDiv.classList.remove("hidden");
+      }
       marcador.bindPopup(`<strong>${lugar.nombre}</strong>`).openPopup();
     });
   });
