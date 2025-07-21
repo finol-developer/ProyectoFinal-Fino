@@ -162,22 +162,28 @@ function mostrarRanking() {
   rankingDiv.innerHTML = "<h3>Resultados del Ranking</h3><ol>";
 
   ordenados.forEach((bar) => {
-    const infoCompleta = nombreLugares.find(lugar => lugar.nombre === bar.nombre);
+    const infoCompleta = nombreLugares.find(
+      lugar => lugar.nombre.trim().toLowerCase() === bar.nombre.trim().toLowerCase()
+    );
+
     const descripcion = infoCompleta?.descripcion || "Sin descripción";
     const direccion = infoCompleta?.direccion || "Sin dirección";
+    const categoria = infoCompleta?.categoria || "Sin categoría";
 
     rankingDiv.innerHTML += `
       <li>
         <strong>${bar.nombre}</strong><br>
         <em>${descripcion}</em><br>
-        <small>${direccion}</small><br>
-        Puntaje total: ${calcularPuntajeTotal(bar.puntajes)}
+        <small><strong>Dirección:</strong> ${direccion}</small><br>
+        <small><strong>Categoría:</strong> ${categoria}</small><br>
+        <strong>Puntaje total:</strong> ${calcularPuntajeTotal(bar.puntajes)}
       </li>
     `;
   });
 
   rankingDiv.innerHTML += "</ol>";
 }
+
 
 
 function mostrarFotoBar(nombreBar) {
