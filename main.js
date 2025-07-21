@@ -4,7 +4,7 @@ let barSeleccionado = null;
 
 const barSelectionDiv = document.getElementById("barSelection");
 const formularioDiv = document.getElementById("formulario");
-const nombreBarH2 = document.getElementById("nombreBar");
+const nombreBarH3 = document.getElementById("nombreBar");
 const votacionForm = document.getElementById("votacionForm");
 const rankingDiv = document.getElementById("ranking");
 const fotoBarDiv = document.getElementById("fotoBar");
@@ -40,7 +40,7 @@ function mostrarBotones() {
 
 function seleccionarBar(index) {
   barSeleccionado = nombreLugares[index];
-  nombreBarH2.textContent = `Votando por: ${barSeleccionado.nombre}`;
+  nombreBarH3.textContent = `Votando por: ${barSeleccionado.nombre}`;
   formularioDiv.classList.remove("hidden");
   mostrarFotoBar(barSeleccionado.nombre);
 }
@@ -92,7 +92,7 @@ function mostrarRanking() {
     (a, b) => calcularPuntajeTotal(b.puntajes) - calcularPuntajeTotal(a.puntajes)
   );
 
-  rankingDiv.innerHTML = "<h2>Resultados del Ranking</h2><ol>";
+  rankingDiv.innerHTML = "<h3>Resultados del Ranking</h3><ol>";
   ordenados.forEach((bar) => {
     rankingDiv.innerHTML += `<li>${bar.nombre} - Puntaje Total: ${calcularPuntajeTotal(bar.puntajes)}</li>`;
   });
@@ -132,7 +132,7 @@ function inicializarMapa() {
     marcador.on("click", () => {
       barSeleccionado = lugar;
       mostrarFotoBar(lugar.nombre);
-      nombreBarH2.textContent = `Votando por: ${lugar.nombre}`;
+      nombreBarH3.textContent = `Votando por: ${lugar.nombre}`;
       formularioDiv.classList.remove("hidden");
       marcador.bindPopup(`<strong>${lugar.nombre}</strong>`).openPopup();
     });
