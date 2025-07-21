@@ -90,8 +90,7 @@ function mostrarCardsDeBares(lista = nombreLugares) {
 
     card.innerHTML = `
       <h4>${bar.nombre}</h4>
-      <p><strong>Categoría:</strong> ${bar.categoria || "Sin categoría"}</p>
-      <p>${bar.descripcion || "Sin descripción disponible."}</p>
+      
       <button onclick="seleccionarBar(${index})">Votar</button>
     `;
 
