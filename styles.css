@@ -280,3 +280,54 @@ body.dark-mode input[type="number"] {
     text-align: center;
   }
 }
+
+.registro-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 300px;
+  width: 90%;
+}
+
+.registro-flotante h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #1e3a8a;
+}
+
+.registro-flotante label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.registro-flotante input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1.5px solid #93c5fd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.registro-flotante button {
+  width: 100%;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registro-flotante button:hover {
+  background-color: #2563eb;
+}
