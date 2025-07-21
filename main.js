@@ -13,7 +13,7 @@ const registroForm = document.getElementById("registroForm");
 const cerrarSesionBtn = document.getElementById("cerrarSesion");
 const modoToggle = document.getElementById("modoToggle");
 
-const URL = "data/data.json";
+const URL = "data.json";
 
 let usuarioRegistrado = JSON.parse(localStorage.getItem("usuarioRegistrado")) || null;
 
