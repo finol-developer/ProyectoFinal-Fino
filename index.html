@@ -10,7 +10,18 @@
 
 <body>
   <h1><span id="tituloAnimado">Ranking de Bares</span></h1>
-
+  
+  <div id="registroUsuario" class="hidden" style="background: #fff; padding: 20px; border: 1px solid #ccc; max-width: 400px; margin: 20px auto; border-radius: 8px;">
+    <h2>Registrarse</h2>
+    <form id="registroForm">
+      <label for="nombreUsuario">Nombre:</label>
+      <input type="text" id="nombreUsuario" required />
+      <label for="emailUsuario">Email:</label>
+      <input type="email" id="emailUsuario" required />
+      <button type="submit">Registrarse</button>
+    </form>
+  </div>
+  
   <section id="product-container"></section>
 
   <div class="contenedor">
