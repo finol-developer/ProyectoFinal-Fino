@@ -160,11 +160,25 @@ function mostrarRanking() {
   );
 
   rankingDiv.innerHTML = "<h3>Resultados del Ranking</h3><ol>";
+
   ordenados.forEach((bar) => {
-    rankingDiv.innerHTML += `<li>${bar.nombre} - Puntaje Total: ${calcularPuntajeTotal(bar.puntajes)}</li>`;
+    const infoCompleta = nombreLugares.find(lugar => lugar.nombre === bar.nombre);
+    const descripcion = infoCompleta?.descripcion || "Sin descripción";
+    const direccion = infoCompleta?.direccion || "Sin dirección";
+
+    rankingDiv.innerHTML += `
+      <li>
+        <strong>${bar.nombre}</strong><br>
+        <em>${descripcion}</em><br>
+        <small>${direccion}</small><br>
+        Puntaje total: ${calcularPuntajeTotal(bar.puntajes)}
+      </li>
+    `;
   });
+
   rankingDiv.innerHTML += "</ol>";
 }
+
 
 function mostrarFotoBar(nombreBar) {
   const apiKey = "spbqzUastUwwArh-0bVAHx1pTGBI7qaINKtwhPZwQWY";
