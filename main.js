@@ -8,10 +8,12 @@ const nombreBarH3 = document.getElementById("nombreBar");
 const votacionForm = document.getElementById("votacionForm");
 const rankingDiv = document.getElementById("ranking");
 const fotoBarDiv = document.getElementById("fotoBar");
-const URL = "data.json";
-
 const registroUsuarioDiv = document.getElementById("registroUsuario");
 const registroForm = document.getElementById("registroForm");
+const cerrarSesionBtn = document.getElementById("cerrarSesion");
+const modoToggle = document.getElementById("modoToggle");
+
+const URL = "data/data.json";
 
 let usuarioRegistrado = JSON.parse(localStorage.getItem("usuarioRegistrado")) || null;
 
@@ -19,9 +21,11 @@ function actualizarEstadoRegistro() {
   if (usuarioRegistrado) {
     registroUsuarioDiv.classList.add("hidden");
     formularioDiv.classList.remove("hidden");
+    cerrarSesionBtn.style.display = "block";
   } else {
     registroUsuarioDiv.classList.remove("hidden");
     formularioDiv.classList.add("hidden");
+    cerrarSesionBtn.style.display = "none";
   }
 }
 
@@ -41,17 +45,33 @@ registroForm.addEventListener("submit", (e) => {
   actualizarEstadoRegistro();
 });
 
+cerrarSesionBtn.addEventListener("click", () => {
+  Swal.fire({
+    title: "¿Cerrar sesión?",
+    text: "Se eliminará el usuario registrado y deberás registrarte de nuevo.",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Sí, cerrar sesión",
+    cancelButtonText: "Cancelar"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      localStorage.removeItem("usuarioRegistrado");
+      usuarioRegistrado = null;
+      actualizarEstadoRegistro();
+      Swal.fire("Sesión cerrada", "Puedes registrarte de nuevo", "info");
+    }
+  });
+});
+
 function obtenerProductos() {
   fetch(URL)
     .then(response => response.json())
     .then(data => {
       nombreLugares = data;
-      mostrarBotones();
+      mostrarCardsDeBares();
       mostrarRanking();
       inicializarMapa();
-      if (nombreLugares.length > 0) {
-        seleccionarBar(0);
-      }
+      if (nombreLugares.length > 0) seleccionarBar(0);
       actualizarEstadoRegistro();
     })
     .catch(error => {
@@ -60,23 +80,29 @@ function obtenerProductos() {
     });
 }
 
-function mostrarBotones() {
-  barSelectionDiv.innerHTML = "";
-  nombreLugares.forEach((nombre, index) => {
-    const btn = document.createElement("button");
-    btn.textContent = nombre.nombre;
-    btn.onclick = () => seleccionarBar(index);
-    barSelectionDiv.appendChild(btn);
+function mostrarCardsDeBares(lista = nombreLugares) {
+  const contenedor = document.getElementById("contenedorCardsBares");
+  contenedor.innerHTML = "";
+
+  lista.forEach((bar, index) => {
+    const card = document.createElement("div");
+    card.className = "card-bar";
+
+    card.innerHTML = `
+      <h4>${bar.nombre}</h4>
+      <p><strong>Categoría:</strong> ${bar.categoria || "Sin categoría"}</p>
+      <p>${bar.descripcion || "Sin descripción disponible."}</p>
+      <button onclick="seleccionarBar(${index})">Votar</button>
+    `;
+
+    contenedor.appendChild(card);
   });
 }
 
 function seleccionarBar(index) {
   barSeleccionado = nombreLugares[index];
   nombreBarH3.textContent = `Votando por: ${barSeleccionado.nombre}`;
-  // Mostrar solo si usuario está registrado
-  if (usuarioRegistrado) {
-    formularioDiv.classList.remove("hidden");
-  }
+  if (usuarioRegistrado) formularioDiv.classList.remove("hidden");
   mostrarFotoBar(barSeleccionado.nombre);
 }
 
@@ -150,7 +176,7 @@ function mostrarFotoBar(nombreBar) {
     .then(data => {
       const fotoUrl = data.results?.[0]?.urls?.regular;
       if (fotoUrl) {
-        fotoBarDiv.innerHTML = `<img src="${fotoUrl}" alt="Imagen relacionada a ${nombreBar}" style="max-width:100%; border-radius:8px;">`;
+        fotoBarDiv.innerHTML = `<img src="${fotoUrl}" alt="Imagen de ${nombreBar}" style="max-width:100%; border-radius:8px;">`;
       } else {
         fotoBarDiv.innerHTML = "<p>No se encontró imagen relacionada.</p>";
       }
@@ -163,7 +189,6 @@ function mostrarFotoBar(nombreBar) {
 
 function inicializarMapa() {
   const mapa = L.map("ubicaciondelugares").setView([39.4702, -0.3768], 13);
-
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
   }).addTo(mapa);
@@ -174,15 +199,11 @@ function inicializarMapa() {
       barSeleccionado = lugar;
       mostrarFotoBar(lugar.nombre);
       nombreBarH3.textContent = `Votando por: ${lugar.nombre}`;
-      if (usuarioRegistrado) {
-        formularioDiv.classList.remove("hidden");
-      }
+      if (usuarioRegistrado) formularioDiv.classList.remove("hidden");
       marcador.bindPopup(`<strong>${lugar.nombre}</strong>`).openPopup();
     });
   });
 }
-
-const modoToggle = document.getElementById("modoToggle");
 
 if (localStorage.getItem("modo") === "oscuro") {
   document.body.classList.add("dark-mode");
@@ -195,38 +216,5 @@ modoToggle.addEventListener("click", () => {
   localStorage.setItem("modo", modoActual);
   modoToggle.textContent = modoActual === "oscuro" ? "Cambiar a Modo Claro" : "Cambiar a Modo Oscuro";
 });
-
-const cerrarSesionBtn = document.getElementById("cerrarSesion");
-
-function actualizarEstadoRegistro() {
-  if (usuarioRegistrado) {
-    registroUsuarioDiv.classList.add("hidden");
-    formularioDiv.classList.remove("hidden");
-    cerrarSesionBtn.style.display = "block"; // Mostrar botón cerrar sesión
-  } else {
-    registroUsuarioDiv.classList.remove("hidden");
-    formularioDiv.classList.add("hidden");
-    cerrarSesionBtn.style.display = "none"; // Ocultar si no hay usuario
-  }
-}
-
-cerrarSesionBtn.addEventListener("click", () => {
-  Swal.fire({
-    title: "¿Cerrar sesión?",
-    text: "Se eliminará el usuario registrado y deberás registrarte de nuevo.",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonText: "Sí, cerrar sesión",
-    cancelButtonText: "Cancelar"
-  }).then((result) => {
-    if (result.isConfirmed) {
-      localStorage.removeItem("usuarioRegistrado");
-      usuarioRegistrado = null;
-      actualizarEstadoRegistro();
-      Swal.fire("Sesión cerrada", "Puedes registrarte de nuevo", "info");
-    }
-  });
-});
-
 
 obtenerProductos();

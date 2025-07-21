@@ -1,245 +1,122 @@
 [
-  { "nombre": "Memoria Gustativa", 
-  "direccion": "Carrer del Comte d'Altea, 43, 46005 Valencia", 
-  "lat": 39.4748, 
-  "lng": -0.3786 },
-
-  { "nombre": "Estaciones", 
-  "direccion": "Carrer Pintor Salvador Abril, 28, 46005 Valencia", 
-  "lat": 39.4736, 
-  "lng": -0.3798 },
-
-  { "nombre": "Fierro", 
-  "direccion": "Carrer Doctor Serrano, 4, 46006 Valencia", 
-  "lat": 39.4741, 
-  "lng": -0.3808 },
-
-  { "nombre": "Samsha Cromas", 
-  "direccion": "Plaça Periodista Ros Belda, 4, 46021 Valencia", 
-  "lat": 39.4587,
-  "lng": -0.3596 },
-
-  { "nombre": "Ricard Camarena Restaurant", 
-  "direccion": "Avinguda de Burjassot, 54, 46009 Valencia", 
-  "lat": 39.4814, 
-  "lng": -0.3761 },
-
-  { "nombre": "Kaido", 
-  "direccion": "Carrer de Quart, 23, 46001 Valencia", 
-  "lat": 39.4701, 
-  "lng": -0.3756 },
-
-  { "nombre": "La Salita", 
-  "direccion": "Carrer Pere III el Gran, 11, 46005 Valencia", 
-  "lat": 39.4713, 
-  "lng": -0.3779 },
-
-  { "nombre": "Pura Tapa VLC", 
-  "direccion": "Carrer de Quart, 77, 46008 Valencia", 
-  "lat": 39.4664, 
-  "lng": -0.378 },
-
-  { "nombre": "Tavella", 
-  "direccion": "Camí Vell de Llíria, 93, 46015 Valencia", 
-  "lat": 39.5185, 
-  "lng": -0.3594 },
-
-  { "nombre": "Local de Ensayo", 
-  "direccion": "Carrer Fray Mateu, 8 10, 46018 Valencia", 
-  "lat": 39.4943, 
-  "lng": -0.3456 },
-
-  { "nombre": "Bar Júcar", 
-  "direccion": "Carrer de Just Vilar, 8, 46011 Valencia", 
-  "lat": 39.4622, 
-  "lng": -0.3457 },
-
-  { "nombre": "Ca La Mar", 
-  "direccion": "Carrer de Just Vilar, 19, 46011 Valencia", 
-  "lat": 39.4618, 
-  "lng": -0.3463 },
-
-  { "nombre": "Los Ángeles", 
-  "direccion": "Carrer de la Beneficència, 31, 46007 Valencia", 
-  "lat": 39.4718, 
-  "lng": -0.3715 },
-
-  { "nombre": "Les Maduixes", 
-  "direccion": "Carrer Daoiz i Velarde, 4, 46021 Valencia", 
-  "lat": 39.4556, 
-  "lng": -0.3605 },
-
-  { "nombre": "Las Grecas", 
-  "direccion": "Carrer de la Tapineria, 14, 46001 Valencia", 
-  "lat": 39.4755, 
-  "lng": -0.3763 },
-
-  { "nombre": "La Pichurrita", 
-  "direccion": "Carrer del Poeta Duran i Tortajada, 7, 46022 Valencia", 
-  "lat": 39.4573, 
-  "lng": -0.3651 },
-
-  { "nombre": "La Sangu", 
-  "direccion": "Carrer de Moratín, 13, 46003 Valencia", 
-  "lat": 39.476, 
-  "lng": -0.3713 },
-
-  { "nombre": "Mari Pili", 
-  "direccion": "Carrer del Mar, 21, 46003 Valencia", 
-  "lat": 39.4767, 
-  "lng": -0.3744 },
-
-  { "nombre": "Bar Trinchera", 
-  "direccion": "Carrer de Na Rovella, 15, 46001 Valencia", 
-  "lat": 39.4757, 
-  "lng": -0.3773 },
-
-  { "nombre": "Tariq", 
-  "direccion": "Carrer del Mestre Gozalbo, 27, 46009 Valencia", 
-  "lat": 39.4782, 
-  "lng": -0.3751 },
-
-  { "nombre": "Navarro", 
-  "direccion": "Carrer de l Arzobispo Mayoral, 5, 46002 Valencia", 
-  "lat": 39.479, 
-  "lng": -0.3745 },
-
-  { "nombre": "Canalla Bistro", 
-  "direccion": "Carrer del Mestre Josep Serrano, 5, 46005 Valencia", 
-  "lat": 39.473, 
-  "lng": -0.3775 },
-
-  { "nombre": "Central Bar", 
-  "direccion": "Plaça del Mercat, 105, 46001 Valencia", 
-  "lat": 39.4751, 
-  "lng": -0.3762 },
-
-  { "nombre": "El Poblet", 
-  "direccion": "Carrer de Correus, 8, 46002 Valencia", 
-  "lat": 39.4795, 
-  "lng": -0.374 },
-
-  { "nombre": "Rausell", 
-  "direccion": "Carrer d'Àngel Guimerà, 61, 46008 Valencia", 
-  "lat": 39.4675, 
-  "lng": -0.3764 },
-
-  { "nombre": "Casa Montaña", 
-  "direccion": "Carrer José Benlliure, 69, 46011 Valencia", 
-  "lat": 39.4603, 
-  "lng": -0.344 },
-
-  { "nombre": "Seu Xerea", 
-  "direccion": "Plaça de la Seu, s/n, 46003 Valencia", 
-  "lat": 39.4758, 
-  "lng": -0.373 },
-
-  { "nombre": "Casa Carmela", 
-  "direccion": "Carrer d'Isabel de Villena, 155, 46011 Valencia", 
-  "lat": 39.4626, 
-  "lng": -0.3477 },
-
-  { "nombre": "Nou Racó", 
-  "direccion": "Carrer de Mestre Gozalbo, 1, 46009 Valencia", 
-  "lat": 39.4785, 
-  "lng": -0.3746 },
-
-  { "nombre": "La Pepica", 
-  "direccion": "Paseo Neptuno, 6, 46011 Valencia", 
-  "lat": 39.4668, 
-  "lng": -0.3254 },
-  { "nombre": "El Canyar", 
-  "direccion": "Passeig de Neptú, 30, 46011 Valencia", 
-  "lat": 39.4685, 
-  "lng": -0.3235 },
-
-  { "nombre": "Malvarrosa Beach Bar", 
-  "direccion": "Passeig de la Malvarrosa, s/n, 46011 Valencia", 
-  "lat": 39.469, 
-  "lng": -0.3212 },
-
-  { "nombre": "Bodega La Pascuala", 
-  "direccion": "Carrer del Dr. Lluch, 299, 46011 Valencia", 
-  "lat": 39.4601, 
-  "lng": -0.345 },
-
-  { "nombre": "L Obrador", 
-  "direccion": "Carrer del Mar, 30, 46003 Valencia", 
-  "lat": 39.4765, 
-  "lng": -0.375 },
-
-  { "nombre": "L Altro Bistro", 
-  "direccion": "Carrer de Quart, 76, 46008 Valencia", 
-  "lat": 39.4662, 
-  "lng": -0.3782 },
-
-  { "nombre": "Restaurante Riff", 
-  "direccion": "Carrer Conde de Altea, 18, 46005 Valencia", 
-  "lat": 39.4747, 
-  "lng": -0.3785 },
-
-  { "nombre": "Sagardi Valencia", 
-  "direccion": "Carrer de Sant Vicent Màrtir, 6, 46002 Valencia", 
-  "lat": 39.4787, 
-  "lng": -0.3735 },
-
-  { "nombre": "La Pilareta", 
-  "direccion": "Carrer del Dr. Manuel Candela, 3, 46001 Valencia", 
-  "lat": 39.474, 
-  "lng": -0.3775 },
-
-  { "nombre": "Bar Pilar", 
-  "direccion": "Carrer de Serrans, 5, 46003 Valencia", 
-  "lat": 39.4753, 
-  "lng": -0.3745 },
-
-  { "nombre": "Duna", 
-  "direccion": "Passeig de Neptú, s/n, 46011 Valencia", 
-  "lat": 39.4689, 
-  "lng": -0.323 },
-
-  { "nombre": "Taberna Alkázar", 
-  "direccion": "Carrer de Jesús, 10, 46007 Valencia", 
-  "lat": 39.4707, 
-  "lng": -0.3711 },
-  
-  { "nombre": "La Llorona", 
-  "direccion": "Carrer de la Concepció, 4, 46003 Valencia", 
-  "lat": 39.4755, 
-  "lng": -0.374 },
-
-  { "nombre": "Restaurante Vuelve Carolina", 
-  "direccion": "Carrer de l'Hospital, 14, 46001 Valencia", 
-  "lat": 39.4749, 
-  "lng": -0.3772 },
-
-  { "nombre": "Ocho y Medio", 
-  "direccion": "Carrer de Sant Vicent Màrtir, 83, 46002 Valencia", 
-  "lat": 39.4792, 
-  "lng": -0.3741 },
-
-  { "nombre": "Mya", 
-  "direccion": "Gran Vía del Marqués del Turia, 57, 46005 Valencia", 
-  "lat": 39.4732, 
-  "lng": -0.3776 },
-
-  { "nombre": "El Almacén", 
-  "direccion": "Carrer del Mar, 38, 46003 Valencia", 
-  "lat": 39.4761, 
-  "lng": -0.3753 },
-
-  { "nombre": "Restaurante Lienzo", 
-  "direccion": "Carrer de la Tapineria, 14, 46001 Valencia", 
-  "lat": 39.4756, 
-  "lng": -0.3761 },
-
-  { "nombre": "FOC Restaurant", 
-  "direccion": "Carrer de la Ferrería, 6, 46001 Valencia", 
-  "lat": 39.4753, 
-  "lng": -0.3757 },
-
-  { "nombre": "La Tasqueta del Mercat (Ruzafa)", 
-  "direccion": "Carrer del Mestre Aguilar, 2, 46006 Valencia", 
-  "lat": 39.4739, 
-  "lng": -0.3799 }
+  {
+    "nombre": "Memoria Gustativa",
+    "direccion": "Carrer del Comte d'Altea, 43, 46005 Valencia",
+    "lat": 39.4748,
+    "lng": -0.3786,
+    "categoria": "Restaurante",
+    "descripcion": "Un rincón gastronómico donde los sabores de la infancia se reinventan con técnicas modernas."
+  },
+  {
+    "nombre": "Estaciones",
+    "direccion": "Carrer Pintor Salvador Abril, 28, 46005 Valencia",
+    "lat": 39.4736,
+    "lng": -0.3798,
+    "categoria": "Restaurante",
+    "descripcion": "Cocina de autor inspirada en los ingredientes frescos de cada estación del año."
+  },
+  {
+    "nombre": "Fierro",
+    "direccion": "Carrer Doctor Serrano, 4, 46006 Valencia",
+    "lat": 39.4741,
+    "lng": -0.3808,
+    "categoria": "Restaurante",
+    "descripcion": "Un lugar íntimo con solo una mesa para disfrutar una experiencia culinaria única y personalizada."
+  },
+  {
+    "nombre": "Samsha Cromas",
+    "direccion": "Plaça Periodista Ros Belda, 4, 46021 Valencia",
+    "lat": 39.4587,
+    "lng": -0.3596,
+    "categoria": "Restaurante",
+    "descripcion": "Experiencia multisensorial que combina arte, luz y sabores en cada plato."
+  },
+  {
+    "nombre": "Ricard Camarena Restaurant",
+    "direccion": "Avinguda de Burjassot, 54, 46009 Valencia",
+    "lat": 39.4814,
+    "lng": -0.3761,
+    "categoria": "Restaurante",
+    "descripcion": "Restaurante galardonado con estrella Michelin que destaca por su cocina valenciana contemporánea."
+  },
+  {
+    "nombre": "Kaido",
+    "direccion": "Carrer de Quart, 23, 46001 Valencia",
+    "lat": 39.4701,
+    "lng": -0.3756,
+    "categoria": "Bar",
+    "descripcion": "Fusión de bar y taberna japonesa con excelente selección de sake y tapas niponas."
+  },
+  {
+    "nombre": "La Salita",
+    "direccion": "Carrer Pere III el Gran, 11, 46005 Valencia",
+    "lat": 39.4713,
+    "lng": -0.3779,
+    "categoria": "Restaurante",
+    "descripcion": "Restaurante de autor con cocina creativa y estética sorprendente en cada plato."
+  },
+  {
+    "nombre": "Pura Tapa VLC",
+    "direccion": "Carrer de Quart, 77, 46008 Valencia",
+    "lat": 39.4664,
+    "lng": -0.378,
+    "categoria": "Bar",
+    "descripcion": "Bar informal para compartir tapas clásicas con un toque moderno, ideal para grupos."
+  },
+  {
+    "nombre": "Tavella",
+    "direccion": "Camí Vell de Llíria, 93, 46015 Valencia",
+    "lat": 39.5185,
+    "lng": -0.3594,
+    "categoria": "Restaurante",
+    "descripcion": "Una casa de campo reformada que ofrece cocina valenciana tradicional con productos de proximidad."
+  },
+  {
+    "nombre": "Local de Ensayo",
+    "direccion": "Carrer Fray Mateu, 8 10, 46018 Valencia",
+    "lat": 39.4943,
+    "lng": -0.3456,
+    "categoria": "Restaurante",
+    "descripcion": "Cocina vanguardista y creativa servida en un entorno moderno y experimental."
+  },
+  {
+    "nombre": "Bar Júcar",
+    "direccion": "Carrer de Just Vilar, 8, 46011 Valencia",
+    "lat": 39.4622,
+    "lng": -0.3457,
+    "categoria": "Bar",
+    "descripcion": "Bar de barrio con ambiente relajado y tapas abundantes, famoso por sus bravas caseras."
+  },
+  {
+    "nombre": "Ca La Mar",
+    "direccion": "Carrer de Just Vilar, 19, 46011 Valencia",
+    "lat": 39.4618,
+    "lng": -0.3463,
+    "categoria": "Pub",
+    "descripcion": "Pub con música en vivo y cócteles originales, ideal para noches entre amigos."
+  },
+  {
+    "nombre": "Los Ángeles",
+    "direccion": "Carrer de la Beneficència, 31, 46007 Valencia",
+    "lat": 39.4718,
+    "lng": -0.3715,
+    "categoria": "Bar",
+    "descripcion": "Ambiente familiar y comida casera en este clásico bar del centro de Valencia."
+  },
+  {
+    "nombre": "Les Maduixes",
+    "direccion": "Carrer Daoiz i Velarde, 4, 46021 Valencia",
+    "lat": 39.4556,
+    "lng": -0.3605,
+    "categoria": "Restaurante",
+    "descripcion": "Restaurante vegetariano con platos coloridos y saludables, en un entorno tranquilo."
+  },
+  {
+    "nombre": "Las Grecas",
+    "direccion": "Carrer de la Tapineria, 14, 46001 Valencia",
+    "lat": 39.4755,
+    "lng": -0.3763,
+    "categoria": "Pub",
+    "descripcion": "Pub bohemio con ambiente retro, ideal para tomar tragos y escuchar música alternativa."
+  }
 ]
